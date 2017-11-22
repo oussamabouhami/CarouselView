@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarouselView.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace CarouselView.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DetailsPage : ContentPage
 	{
-		public DetailsPage()
+		public DetailsPage(Book book)
 		{
 			InitializeComponent();
 		}

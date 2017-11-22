@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CarouselView.ViewModels;
+using CarouselView.Models;
 
 namespace CarouselView.Views
 {
@@ -15,6 +13,17 @@ namespace CarouselView.Views
 		public BooksPage()
 		{
 			InitializeComponent();
+
+			BindingContext = new BooksViewModel();
+		}
+		void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+		=> ((ListView)sender).SelectedItem = null;
+
+		void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+		{
+			var book = ((ListView)sender).SelectedItem as Book;
+			if (book == null)
+				return;
 		}
 	}
 }

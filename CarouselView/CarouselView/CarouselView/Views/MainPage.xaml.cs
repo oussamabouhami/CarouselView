@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CarouselView.Views;
 using Xamarin.Forms;
 
 namespace CarouselView
@@ -15,7 +13,7 @@ namespace CarouselView
         }
 		async void ButtonTraditionalClicked(object sender, System.EventArgs e)
 		{
-			//await Navigation.PushAsync(new MonkeysPage());
+			await Navigation.PushAsync(new BooksPage());
 		}
 
 		async void ButtonDataPagesClicked(object sender, System.EventArgs e)

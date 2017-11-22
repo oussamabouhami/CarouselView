@@ -9,7 +9,6 @@ using Xamarin.Forms;
 
 namespace CarouselView
 {
-
 	public static class ViewModelLocator
 	{
 		static BooksViewModel booksVM;
