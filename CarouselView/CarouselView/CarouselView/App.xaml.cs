@@ -14,7 +14,7 @@ namespace CarouselView
 		static BooksViewModel booksVM;
 		public static BooksViewModel BooksViewModel
 		=> booksVM ?? (booksVM = new BooksViewModel());
-
+		
 		static DetailsViewModel detailsVM;
 		public static DetailsViewModel DetailsViewModel
 		=> detailsVM ?? (detailsVM = new DetailsViewModel(BookHelper.Books[0]));
@@ -28,11 +28,12 @@ namespace CarouselView
 
 			//MainPage = new CarouselView.MainPage();
 
-			MainPage = new NavigationPage(new BooksPage())
+			MainPage = new NavigationPage(new MainPage())
 			{
 				BarTextColor = Color.White,
 				BarBackgroundColor = Color.FromHex("#2196F3")
 			};
+			
 		}
 
 		protected override void OnStart()

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarouselView.Views.AnnimationButton">
+    <ContentPage.Content>
+		<StackLayout Padding="100" Spacing="20" WidthRequest="10">
+			<Button Text="Click Me" 
+                    x:Name="btnRotate"
+                    VerticalOptions="Center"
+					Clicked="btnRotate_Clicked" />
+			<Button Text="Click Me" 
+                    x:Name="btnRotate1"
+                    VerticalOptions="Center"
+					Clicked="btnRotate1_Clicked"/>
+			<Button Text="Click Me" 
+                    x:Name="btnRotate2"
+                    VerticalOptions="Center"
+					Clicked="btnRotate2_Clicked"/>
+			<Button Text="Click Me" 
+                    x:Name="btnRotate3"
+                    VerticalOptions="Center"
+					Clicked="btnRotate3_Clicked"/>
+			<Button Text="Click Me" 
+                    x:Name="btnRotate4"
+                    VerticalOptions="Center"
+					Clicked="btnRotate4_Clicked"/>
+		
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

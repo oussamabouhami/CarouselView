@@ -4,18 +4,25 @@
              xmlns:local="clr-namespace:CarouselView"
              x:Class="CarouselView.MainPage"
 			 Title="Books">
-    <ContentPage.Content>
+	<ContentPage.Content>
 		<StackLayout Padding="20" Spacing="10">
-			<Button Text="Traditional XAML" 
-                    x:Name="ButtonTraditional"
+			<Button Text="Carousel View And List" 
+                    x:Name="btnCarouselList"
                     VerticalOptions="Center"
-                    Clicked="ButtonTraditionalClicked"/>
-			<Button Text="Data Pages" 
-                    x:Name="ButtonDataPages"
+					Clicked="btnCarouselList_Clicked"/>
+			<Button Text="Carousel View" 
+                    x:Name="btnCarouselView"
                     VerticalOptions="Center"
-                    Clicked="ButtonDataPagesClicked"/>
+					Clicked="btnCarouselView_Clicked"/>
+			<Button Text="Carousel Page" 
+                    x:Name="btnCarouselPage"
+                    VerticalOptions="Center"
+					Clicked="btnCarouselPage_Clicked"/>
+			<Button Text="Animations" 
+                    x:Name="btnAnimations"
+					Clicked="btnAnimations_Clicked"
+                    VerticalOptions="Center"/>
 
-			<Button Text="Hello world"/>
 			<Switch Margin="10,30" IsToggled="false"/>
 		</StackLayout>
 	</ContentPage.Content>

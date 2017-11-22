@@ -41,8 +41,21 @@
     <Compile Include="Helpers\BookHelper.cs" />
     <Compile Include="Helpers\Grouping.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Views\AnnimationButton.xaml.cs">
+      <DependentUpon>AnnimationButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AnnimationPage.xaml.cs">
+      <DependentUpon>AnnimationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BooksPage.xaml.cs">
       <DependentUpon>BooksPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Buttonn.cs" />
+    <Compile Include="Views\CarouselPage.xaml.cs">
+      <DependentUpon>CarouselPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CarouselView.xaml.cs">
+      <DependentUpon>CarouselView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\DetailsPage.xaml.cs">
       <DependentUpon>DetailsPage.xaml</DependentUpon>
@@ -91,7 +104,10 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\Dots\active_dot.png" />
+    <EmbeddedResource Include="Images\Dots\noactive_dot.png" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\DetailsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -100,6 +116,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\BooksPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CarouselView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CarouselPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AnnimationButton.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AnnimationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

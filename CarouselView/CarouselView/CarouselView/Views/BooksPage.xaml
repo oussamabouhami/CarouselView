@@ -4,12 +4,32 @@
              x:Class="CarouselView.Views.BooksPage"
 			 x:Name="BooksPage"
 			 Title="Traditional Books"
-			  xmlns:design="clr-namespace:CarouselView;assembly=CarouselView"
+			 xmlns:design="clr-namespace:CarouselView;assembly=CarouselView"
         xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
         xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
-		    BindingContext="{x:Static design:ViewModelLocator.BooksViewModel}"
-			 >
-	<ContentPage.Content>
+		    BindingContext="{x:Static design:ViewModelLocator.BooksViewModel}" >
+	
+	<ContentPage.Content >
+
+		
+		<!--<cv:CarouselView x:Name="CarouselSchools" ItemsSource="{Binding Path=BindingContext.Schools, Source={x:Reference BooksPage}}" ItemSelected="CarouselSchools_ItemSelected"   HeightRequest="200">
+			<cv:CarouselView.ItemTemplate>
+				<DataTemplate>
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*"/>
+							<RowDefinition Height="Auto"/>
+						</Grid.RowDefinitions>
+						<Image Grid.RowSpan="2" Aspect="AspectFill" Source="{Binding ImageUrl}"/>
+						
+					</Grid>
+				</DataTemplate>
+			</cv:CarouselView.ItemTemplate>
+		</cv:CarouselView>
+		<StackLayout x:Name="slideDots"  Padding="12">
+			<Image  HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+		</StackLayout>-->
+		
 		<ListView ItemsSource="{Binding BooksGrouped}"
                 ItemTapped="Handle_ItemTapped"
                 ItemSelected="Handle_ItemSelected"
@@ -18,7 +38,7 @@
                 IsGroupingEnabled = "true"
                 GroupDisplayBinding = "{Binding Key}">
 			<ListView.Header>
-				<cv:CarouselView x:Name="CarouselSchools" ItemsSource="{Binding Path=BindingContext.Schools, Source={x:Reference BooksPage}}" HeightRequest="200">
+				<cv:CarouselView x:Name="CarouselSchools" ItemsSource="{Binding Path=BindingContext.Schools, Source={x:Reference BooksPage}}" ItemSelected="CarouselSchools_ItemSelected"   HeightRequest="200">
 					<cv:CarouselView.ItemTemplate>
 						<DataTemplate>
 							<Grid>
@@ -27,8 +47,8 @@
 									<RowDefinition Height="Auto"/>
 								</Grid.RowDefinitions>
 								<Image Grid.RowSpan="2" Aspect="AspectFill" Source="{Binding ImageUrl}"/>
-								<StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
-									<Label TextColor="White" Text="{Binding Name}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+								<StackLayout x:Name="tst1" Grid.Row="1"  Padding="12">
+									<Image  HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
 								</StackLayout>
 							</Grid>
 						</DataTemplate>
@@ -70,5 +90,6 @@
 				</DataTemplate>
 			</ListView.ItemTemplate>
 		</ListView>
+		
 	</ContentPage.Content>
 </ContentPage>

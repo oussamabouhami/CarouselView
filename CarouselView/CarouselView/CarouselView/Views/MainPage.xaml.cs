@@ -10,15 +10,29 @@ namespace CarouselView
         public MainPage()
         {
             InitializeComponent();
+
+
         }
-		async void ButtonTraditionalClicked(object sender, System.EventArgs e)
+
+		private async void btnAnimations_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new AnnimationButton());
+		}
+
+		private async void btnCarouselPage_Clicked(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new Buttonn());
+		}
+
+		private async void btnCarouselView_Clicked(object sender, EventArgs e)
 		{
 			await Navigation.PushAsync(new BooksPage());
 		}
 
-		async void ButtonDataPagesClicked(object sender, System.EventArgs e)
+		private async void btnCarouselList_Clicked(object sender, EventArgs e)
 		{
-			await DisplayAlert("Coming soon", "Waiting on those new NuGets!", "OK");
+			await Navigation.PushAsync(new BooksPage());
 		}
+		
 	}
 }
