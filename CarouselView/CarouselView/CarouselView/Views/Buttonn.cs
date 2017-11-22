@@ -22,7 +22,21 @@ namespace CarouselView.Views
 
 			btnRotate.Clicked+= async (sender, arge) =>
 			{
-				await btnRotate.RotateTo(15, 1000, new Easing(t => Math.Sin(Math.PI * t) * Math.Sin(Math.PI * 20 * t)));
+				btnRotate.AnchorX = 0;
+				btnRotate.AnchorY = 1;
+				await btnRotate.RotateTo(90, 3000, new Easing(t => 1 - Math.Cos(10 * Math.PI * t) * Math.Exp(-5 * t)));
+				await btnRotate.TranslateTo(0, (Height - btnRotate.Height) / 2 - btnRotate.Width , 1000, Easing.BounceOut);
+				btnRotate.AnchorX = 1;
+				btnRotate.AnchorY = 0;
+
+				btnRotate.TranslationX -= btnRotate.Width - btnRotate.Height;
+				btnRotate.TranslationY += btnRotate.Width + btnRotate.Height;
+
+				btnRotate.RotateYTo(360, 1000);
+				await btnRotate.RotateTo(180, 1000, Easing.SpringIn);
+
+				btnRotate.FadeTo(0, 4000);
+				await btnRotate.TranslateTo(0, -Height, 5000 , Easing.CubicIn);
 			};
 
 			this.Content = btnRotate;

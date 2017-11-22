@@ -20,8 +20,12 @@ namespace CarouselView.Views
 
 		private async void btnRotate_Clicked(object sender, EventArgs e)
 		{
-			await btnRotate.FadeTo(0, 2000);
-			await btnRotate.FadeTo(1, 1000);
+			//await btnRotate.FadeTo(0, 2000);
+			//await btnRotate.FadeTo(1, 1000);
+
+			btnRotate.AnchorX = 0;
+			btnRotate.AnchorY = 1;
+			await btnRotate.RotateTo(90, 3000, new Easing(t => Math.Sin(Math.PI * t) * Math.Cos(10 * Math.PI * t) * Math.Exp(-5 * t)));
 		}
 
 		private async void btnRotate1_Clicked(object sender, EventArgs e)
@@ -35,24 +39,22 @@ namespace CarouselView.Views
 		{
 			btnRotate2.Rotation = 0;
 			await btnRotate2.RotateTo(360, 500);
-			await btnRotate2.FadeTo(0, 500);
+			btnRotate2.FadeTo(0, 1000);
 			await btnRotate2.ScaleTo(2, 1000);
-			await btnRotate2.FadeTo(1, 250);
+			btnRotate2.FadeTo(1, 250);
 			await btnRotate2.ScaleTo(1, 250);
 		}
 
 		private async void btnRotate3_Clicked(object sender, EventArgs e)
 		{
-			await btnRotate3.ScaleTo(.6, 500);
-			await btnRotate3.ScaleTo(1.2, 1000);
-			await btnRotate3.ScaleTo(1, 1000);
+			await btnRotate4.ScaleTo(0.6, 1000);
+			await btnRotate4.ScaleTo(1.2, 250);
+			await btnRotate4.ScaleTo(1, 500);
 		}
 
 		private async void btnRotate4_Clicked(object sender, EventArgs e)
 		{
-			await btnRotate4.ScaleTo(0.6, 1000);
-			await btnRotate4.ScaleTo(1.2, 250);
-			await btnRotate4.ScaleTo(1, 500);
+			await btnRotate.RotateTo(15, 1000, new Easing(t => Math.Sin(Math.PI * t) * Math.Sin(Math.PI * 20 * t)));
 		}
 
 	}
