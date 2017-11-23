@@ -44,13 +44,15 @@ namespace CarouselView.ViewModels
 
 			UpdateProduct(product);
 
-			_oldProduct = product;
+			//_oldProduct = product;
 		}
 
 		private void UpdateProduct(Product product)
 		{
+			var index = Products.IndexOf(product);
 			Products.Remove(product);
-			Products.Insert(Products.IndexOf(product), product);
+			Products.Insert(index, product);
 		}
+
 	}
 }

@@ -19,14 +19,14 @@ namespace CarouselView.Views
 			InitializeComponent();
 		}
 
-		//private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
-		//{
-		//	var vm = BindingContext as ProductViewModel;
+		private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+		{
+			var vm = BindingContext as ProductViewModel;
 
-		//	var product = e.Item as Product;
+			var product = e.Item as Product;
 
-		//	vm.HideOrShowProduct(product);
+			vm.HideOrShowProduct(product);
 
-		//}
+		}
 	}
 }

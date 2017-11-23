@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:local="clr-namespace:CarouselView.ViewModels"
              x:Class="CarouselView.Views.ExpandableListe">
-    <!--<ContentPage.BindingContext>
+    <ContentPage.BindingContext>
 		<local:ProductViewModel/>
 	</ContentPage.BindingContext>
 
@@ -23,5 +24,5 @@
 			</DataTemplate>
 		</ListView.ItemTemplate>
 		
-	</ListView>-->
+	</ListView>
 </ContentPage>
