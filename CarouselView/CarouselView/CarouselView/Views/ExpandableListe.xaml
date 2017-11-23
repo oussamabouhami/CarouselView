@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarouselView.Views.ExpandableListe">
+    <!--<ContentPage.BindingContext>
+		<local:ProductViewModel/>
+	</ContentPage.BindingContext>
+
+	<ListView
+		ItemsSource="{Binding Products}"
+		HasUnevenRows="True"
+		Margin="40,80"
+		ItemTapped="ListView_ItemTapped">
+
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout>
+						<Label Text="{Binding Title}"></Label>
+						<Button Text="Details" IsVisible="{Binding IsVisible}"></Button>
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+		
+	</ListView>-->
+</ContentPage>

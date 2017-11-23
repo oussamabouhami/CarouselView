@@ -7,22 +7,27 @@
 			<Button Text="Click Me" 
                     x:Name="btnRotate"
                     VerticalOptions="Center"
+					IsVisible="False"
 					Clicked="btnRotate_Clicked" />
 			<Button Text="Click Me" 
                     x:Name="btnRotate1"
                     VerticalOptions="Center"
+					IsVisible="False"
 					Clicked="btnRotate1_Clicked"/>
 			<Button Text="Click Me" 
                     x:Name="btnRotate2"
                     VerticalOptions="Center"
+					IsVisible="False"
 					Clicked="btnRotate2_Clicked"/>
 			<Button Text="Click Me" 
                     x:Name="btnRotate3"
                     VerticalOptions="Center"
+					IsVisible="False"
 					Clicked="btnRotate3_Clicked"/>
 			<Button Text="Click Me" 
                     x:Name="btnRotate4"
                     VerticalOptions="Center"
+					IsVisible="False"
 					Clicked="btnRotate4_Clicked"/>
 		
 		</StackLayout>

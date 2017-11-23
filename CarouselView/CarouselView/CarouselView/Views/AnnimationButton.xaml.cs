@@ -12,10 +12,40 @@ namespace CarouselView.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class AnnimationButton : ContentPage
 	{
-		public AnnimationButton()
+		public  AnnimationButton()
 		{
+			//LoadView();
 			InitializeComponent();
-			
+			LoadView();
+		}
+
+		private async void LoadView()
+		{
+			btnRotate.ScaleTo(0.5, 10);
+			btnRotate.IsVisible = true;
+			await btnRotate.ScaleTo(1.2, 250, Easing.CubicIn);
+			btnRotate.ScaleTo(1, 500, Easing.BounceOut);
+
+			btnRotate1.ScaleTo(0.5, 10);
+			btnRotate1.IsVisible = true;
+			await btnRotate1.ScaleTo(1.2, 250, Easing.CubicIn);
+			btnRotate1.ScaleTo(1, 500, Easing.BounceOut);
+
+			btnRotate2.ScaleTo(0.5, 10);
+			btnRotate2.IsVisible = true;
+			await btnRotate2.ScaleTo(1.2, 250, Easing.CubicIn);
+			 btnRotate2.ScaleTo(1, 500, Easing.BounceOut);
+
+
+			btnRotate3.ScaleTo(0.5, 10);
+			btnRotate3.IsVisible = true;
+			await btnRotate3.ScaleTo(1.2, 250, Easing.CubicIn);
+			btnRotate3.ScaleTo(1, 500 , Easing.BounceOut);
+
+			btnRotate4.ScaleTo(0.5, 10);
+			btnRotate4.IsVisible = true;
+			await btnRotate4.ScaleTo(1.2, 250, Easing.CubicIn);
+			btnRotate4.ScaleTo(1, 500, Easing.BounceOut);
 		}
 
 		private async void btnRotate_Clicked(object sender, EventArgs e)

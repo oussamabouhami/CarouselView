@@ -58,7 +58,7 @@
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
-						<Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+						<Grid Padding="10" RowSpacing="10" ColumnSpacing="10" IsVisible="False" x:Name="cellGrid">
 							<Grid.RowDefinitions>
 								<RowDefinition Height="Auto"/>
 								<RowDefinition Height="*"/>

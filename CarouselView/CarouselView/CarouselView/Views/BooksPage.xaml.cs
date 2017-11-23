@@ -26,6 +26,7 @@ namespace CarouselView.Views
 		public BooksPage()
 		{
 			InitializeComponent();
+			
 
 			BindingContext = new BooksViewModel();
 
@@ -53,7 +54,16 @@ namespace CarouselView.Views
 			//dots[0].Source = ImageSource.FromResource("CarouselView.Images.Dots.active_dot.png");
 
 		}
-		void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+
+		private async void LoadView()
+		{
+		//	cell.ScaleTo(0.5, 10);
+		//	btnRotate.IsVisible = true;
+		//	await btnRotate.ScaleTo(1.2, 250, Easing.CubicIn);
+		//	btnRotate.ScaleTo(1, 500, Easing.BounceOut);
+		}
+
+			void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
 		=> ((ListView)sender).SelectedItem = null;
 
 

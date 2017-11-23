@@ -14,7 +14,7 @@
                     x:Name="btnCarouselView"
                     VerticalOptions="Center"
 					Clicked="btnCarouselView_Clicked"/>
-			<Button Text="Carousel Page" 
+			<Button Text="Expandable List" 
                     x:Name="btnCarouselPage"
                     VerticalOptions="Center"
 					Clicked="btnCarouselPage_Clicked"/>
